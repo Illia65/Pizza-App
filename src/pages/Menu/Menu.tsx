@@ -1,3 +1,4 @@
-export function Menu () {
-    return <>Menu</>
+
+export function Menu() {
+  return <>Menu</>;
 }

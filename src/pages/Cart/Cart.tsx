@@ -1,3 +1,5 @@
-export function Cart () {
-    return <>Cart</>
-} 
+
+
+export function Cart() {
+  return <>Cart</>;
+}

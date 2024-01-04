@@ -1,3 +1,5 @@
-export function Error () {
-    return <>Error</>
+
+
+export function Error() {
+  return <>Error</>;
 }

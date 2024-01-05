@@ -28,6 +28,12 @@
   text-decoration: none;
   color: var(--text-color);
 }
+.link:hover{
+color: var(--primary-hover-color);
+}
+.active{
+    color: var(--primary-hover-color); 
+}
 .user {
   margin-bottom: 46px;
 }

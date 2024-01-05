@@ -1,0 +1,54 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  padding: 30px;
+  border-right: 1px solid var(--separator-color);
+  display: flex;
+  flex-direction: column;
+}
+.exit {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.link {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.user {
+  margin-bottom: 46px;
+}
+.avatar{
+    margin-bottom: 20px;
+    fill: url(<path-to-image>), lightgray -138.064px -63.234px / 404.879% 222.26% no-repeat;
+}
+.name {
+  color: var(--text-color);
+  font-family: Open Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  
+}
+.email{
+    color: #9EA1B1;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

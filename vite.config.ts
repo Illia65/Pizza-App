@@ -1,15 +1,11 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-
-import ViteReactPlugin from '@vitejs/plugin-react-swc';
-
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [react()],
-  
+  css: {
+    modules: {
+      localsConvention: 'camelCase', // Добавьте это поле, если вы хотите использовать camelCase
+    },
+  },
 });
-
-
-
-
-

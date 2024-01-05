@@ -10,15 +10,10 @@ function Button({
 }: ButtonProps) {
   return (
     <button
-      className={cn(
-        styles.button,
-        styles.accent,
-        className,
-        {
-          [styles.small]: appearance === "small", // исправлено с = на ===
-          [styles.big]: appearance === "big",     // исправлено с = на ===
-        }
-      )}
+      className={cn(styles.button, styles.accent, className, {
+        [styles.small]: appearance === "small", // исправлено с = на ===
+        [styles.big]: appearance === "big", // исправлено с = на ===
+      })}
       {...props}
     >
       {children}

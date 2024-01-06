@@ -58,3 +58,7 @@ color: var(--primary-hover-color);
     font-weight: 400;
     line-height: normal;
 }
+.content{
+  width: 100%;
+  padding: 40px 60px;
+}

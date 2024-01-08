@@ -1,6 +1,6 @@
 export interface ProductCardProps {
     id: number
-    title: string
+    name: string
     descriptions: string
     image: string
     price: number

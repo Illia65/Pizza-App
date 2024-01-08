@@ -5,17 +5,14 @@ import Search from "../../components/Search/Search";
 import { PREFIX } from "../../helpers/API";
 import { Product } from "../../interfaces/product.interfaces";
 import styles from "./Menu.module.css";
+import axios from "axios";
 
 export function Menu() {
   const [products, setProducts] = useState<Product[]>([]);
 
   const getMenu = async () => {
     try {
-      const res = await fetch(`${PREFIX}/products`);
-      if (!res.ok) {
-        return;
-      }
-      const data = (await res.json()) as Product[];
+      const { data } = await axios.get<Product[]>(`${PREFIX}/products`);
       setProducts(data);
     } catch (e) {
       console.error(e);
@@ -23,9 +20,9 @@ export function Menu() {
     }
   };
 
-  useEffect (() => {
+  useEffect(() => {
     getMenu();
-  })
+  });
 
   return (
     <>
@@ -36,7 +33,7 @@ export function Menu() {
       <div>
         {products.map((p) => (
           <ProductCard
-          key={p.id}
+            key={p.id}
             id={p.id}
             name={p.name}
             descriptions={p.ingredients.join(", ")}

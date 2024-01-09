@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <Product />,
-
+        errorElement: <>Ошибка</>, // обработчик ошибки если роутер не правельный
         loader: async ({ params }) => {
           await new Promise<void>((resolve) => {
             setTimeout(() => {

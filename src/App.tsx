@@ -31,15 +31,3 @@ function App() {
 }
 
 export default App;
-
-//у нас есть два роута на главной меню а на другой карт
-
-{
-  /* <Routes> 
-<Route path="/" element={<Menu/>}/>
-<Route path="Cart" element={<Cart/>}/>
-</Routes> */
-}
-
-//В новой версии для указания дефолтного
-//маршрута используется * вместо path="/".

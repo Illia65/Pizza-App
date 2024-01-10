@@ -38,3 +38,11 @@ font-size: 14px;
     text-decoration: none;
     color: var( --primary-hover-color)
 }
+
+
+.error {
+  background-color: rgb(224, 79, 79);
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+}

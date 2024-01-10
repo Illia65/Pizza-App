@@ -8,12 +8,12 @@ export function Register() {
   return (
     <div className={styles["registr"]}>
       <Headlink>Регистрация</Headlink>
-      <form>
-        <div>
+      <form className={styles["form"]}>
+        <div className={styles["field"]}>
           <label htmlFor="">Ваш email</label>
           <Input placeholder="Email" isValid={false} />
         </div>
-        <div>
+        <div className={styles["field"]}>
           <label htmlFor="">Ваш пароль</label>
           <Input
             placeholder="Пароль"
@@ -22,15 +22,18 @@ export function Register() {
             isValid={false}
           />
         </div>
-        <div>
+        <div className={styles["field"]}>
           <label htmlFor="">Ваше имя</label>
           <Input placeholder="Имя" isValid={false} />
         </div>
       </form>
       <Button appearance="big">Зарегистрироваться</Button>
-      <div>Есть акканут?</div>
+
       <div>
-        <Link to={"/auth/login"}>Войти</Link>
+        <div className={styles['links']}>
+          Есть акканут?
+          <Link to={"/auth/login"}>Войти</Link>
+        </div>
       </div>
     </div>
   );

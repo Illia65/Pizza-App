@@ -12,13 +12,18 @@ import { AuthLayout } from "./Layout/Auth/AuthLayout.tsx";
 // import Login from "./pages/Login/Login.tsx";
 import { Register } from "./pages/Register/Register.tsx";
 import { Login } from "./pages/Login/Login.tsx";
+import { RequireAuth } from "./helpers/RequireAuth.tsx";
 
 const Menu = lazy(() => import("./pages/Menu/Menu"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <RequireAuth>
+        <Layout />
+      </RequireAuth>
+    ),
     children: [
       {
         path: "/menu",
@@ -53,23 +58,22 @@ const router = createBrowserRouter([
   },
   {
     path: "/auth",
-    element: <AuthLayout/>,
+    element: <AuthLayout />,
     children: [
       {
         path: "Login",
-        element: <Login/>,
+        element: <Login />,
       },
       {
-        path:"register",
-        element:<Register/>
-      }
+        path: "register",
+        element: <Register />,
+      },
     ],
   },
   {
-    path:"/",
-    element:<Error/>
-  }
-  
+    path: "/",
+    element: <Error />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

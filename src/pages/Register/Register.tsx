@@ -31,7 +31,7 @@ export function Register() {
 
       <div>
         <div className={styles['links']}>
-          Есть акканут?
+          Есть акаунт?
           <Link to={"/auth/login"}>Войти</Link>
         </div>
       </div>

@@ -28,8 +28,6 @@ export function Login() {
     console.log(e);
     const target = e.target as typeof e.target & LoginForm;
     const { email, password } = target;
-    // console.log(password.value);
-    // console.log(email.value);
     await sentLogin(email.value, password.value);
   };
   const sentLogin = async (email: string, password: string) => {
@@ -70,7 +68,7 @@ export function Login() {
       </form>
       <div>
         <div className={styles["links"]}>
-          Нет акканута?
+          Нет акаунта?
           <Link to={"/auth/register"}>Зарегистрироваться</Link>
         </div>
       </div>

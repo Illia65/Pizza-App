@@ -9,7 +9,6 @@ import { Product } from "./pages/Product/Product.tsx";
 import axios from "axios";
 import { PREFIX } from "./helpers/API.ts";
 import { AuthLayout } from "./Layout/Auth/AuthLayout.tsx";
-// import Login from "./pages/Login/Login.tsx";
 import { Register } from "./pages/Register/Register.tsx";
 import { Login } from "./pages/Login/Login.tsx";
 import { RequireAuth } from "./helpers/RequireAuth.tsx";
@@ -82,4 +81,3 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-//подключение роутинга

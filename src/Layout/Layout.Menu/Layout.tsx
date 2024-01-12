@@ -3,15 +3,18 @@ import styles from "../Layout.module.css";
 import Button from "../../components/Button/Button";
 
 import cn from "classnames";
+import { AppDispatch } from "../../store/store";
+import { userActions } from "../../store/user.slice";
+import { useDispatch } from "react-redux";
 
 export function Layout() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
-  const navigate = useNavigate()
-
-  const logout = () =>{
-    localStorage.removeItem('jwt')
-    navigate('/auth/login')
-  }
+  const logout = () => {
+    dispatch(userActions.logout());
+    navigate("/auth/login");
+  };
 
   return (
     <div className={styles["layout"]}>

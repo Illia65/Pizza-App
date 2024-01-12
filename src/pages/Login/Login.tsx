@@ -3,13 +3,11 @@ import Button from "../../components/Button/Button";
 import Headlink from "../../components/Headlink/Headlink";
 import Input from "../../components/Input/Input";
 import styles from "./Login.module.css";
-import { FormEvent, useState } from "react";
-import axios, { AxiosError } from "axios";
-import { PREFIX } from "../../helpers/API";
-import { LoginResponse } from "../../interfaces/authInterface";
-import { useDispatch } from "react-redux";
+import { FormEvent, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../../store/store";
-import { userActions } from "../../store/user.slice";
+import { login, userActions } from "../../store/user.slice";
+import { RootState } from "../../store/store";
 
 export type LoginForm = {
   email: {
@@ -25,30 +23,25 @@ export function Login() {
   const [error, setError] = useState<string | null>();
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
+  const jwt = useSelector((s: RootState) => s.user.jwt);
+
+  useEffect(() => {
+    if (jwt) {
+      navigate("/menu");
+    }
+  }, [jwt, navigate]);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
-    setError(null);
-    console.log(e);
+   dispatch(userActions.clearLoginError())
+   
     const target = e.target as typeof e.target & LoginForm;
     const { email, password } = target;
     await sentLogin(email.value, password.value);
   };
   const sentLogin = async (email: string, password: string) => {
-    try {
-      const { data } = await axios.post<LoginResponse>(`${PREFIX}/auth/login`, {
-        email,
-        password,
-      });
-      console.log(data);
-      // localStorage.setItem("jwt", data.access_token);
-      dispatch(userActions.addJwt(data.access_token));
-      navigate("/menu");
-    } catch (e) {
-      if (e instanceof AxiosError) {
-        setError(e.response?.data.message);
-      }
-    }
+    dispatch(login({ email, password }));
+    setError("Ошибка входа ")
   };
   return (
     <div className={styles["login"]}>

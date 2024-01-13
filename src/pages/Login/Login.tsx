@@ -41,7 +41,7 @@ export function Login() {
   };
   const sentLogin = async (email: string, password: string) => {
     dispatch(login({ email, password }));
-    setError("Ошибка входа ")
+    // setError();
   };
   return (
     <div className={styles["login"]}>

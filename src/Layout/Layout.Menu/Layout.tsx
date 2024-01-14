@@ -12,6 +12,7 @@ export function Layout() {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const profile = useSelector ((s:RootState) => s.user.profile )
+  const items = useSelector ((s:RootState) => s.cart.items )
 
   useEffect(() => {
     dispatch(getProfile());
@@ -53,7 +54,10 @@ export function Layout() {
           >
             <img src="/cart-icon.svg" alt="" />
             Корзина
+            <span className={styles['cart-count']}>{items.reduce((acc, item) => acc + item.count,0)}</span>;
           </NavLink>
+      
+
         </div>
 
         <Button appearance={"big"} className={styles["exit"]} onClick={logout}>

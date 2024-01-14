@@ -28,18 +28,19 @@
   text-decoration: none;
   color: var(--text-color);
 }
-.link:hover{
-color: var(--primary-hover-color);
+.link:hover {
+  color: var(--primary-hover-color);
 }
-.active{
-    color: var(--primary-hover-color); 
+.active {
+  color: var(--primary-hover-color);
 }
 .user {
   margin-bottom: 46px;
 }
-.avatar{
-    margin-bottom: 20px;
-    fill: url(<path-to-image>), lightgray -138.064px -63.234px / 404.879% 222.26% no-repeat;
+.avatar {
+  margin-bottom: 20px;
+  fill: url(<path-to-image>),
+    lightgray -138.064px -63.234px / 404.879% 222.26% no-repeat;
 }
 .name {
   color: var(--text-color);
@@ -48,17 +49,27 @@ color: var(--primary-hover-color);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  
 }
-.email{
-    color: #9EA1B1;
-    font-family: Open Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.email {
+  color: #9ea1b1;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.content{
+.content {
   width: 100%;
   padding: 40px 60px;
+}
+.cart-count {
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--white-color);
 }

@@ -36,12 +36,17 @@
 }
 
 .price {
-	color: var(--primary-color);
+	color:black;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
+	cursor: pointer;
 }
+.price:hover{
+	color: var(--primary-color);
+}
+
 
 .minus {
 	display: flex;

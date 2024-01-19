@@ -1,37 +1,50 @@
-.headlink{
-    margin-bottom: 40px;
+.headlink {
+  margin-bottom: 40px;
 }
 
-
 .line {
-	max-width: 512px;
-	display: flex;
-	justify-content: space-between;
-	padding: 17px 0;
+  max-width: 512px;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0;
 }
 
 .hr {
-	max-width: 512px;
-	margin: 0;
-	border: 1px solid #F1F2F3;
+  max-width: 512px;
+  margin: 0;
+  border: 1px solid #f1f2f3;
 }
 
 .line span {
-	color: var(--sub-color, #9796A1);
+  color: var(--sub-color, #9796a1);
 }
 
 .text {
-	color: var(--text-color);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+  color: var(--text-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .price {
-	color: var(--text-color);
-	font-size: 19px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+  color: var(--text-color);
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.total-count {
+  color: #bebebe;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+  font-style: normal;
+}
+.checkout {
+  max-width: 512px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
 }

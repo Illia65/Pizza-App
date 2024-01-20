@@ -1,7 +1,6 @@
 .layout {
   display: flex;
   min-height: 100vh;
-
 }
 .logo {
   flex: 1;
@@ -10,7 +9,6 @@
   justify-content: center;
 }
 .content {
-  
   flex: 1;
   display: flex;
   align-items: center;

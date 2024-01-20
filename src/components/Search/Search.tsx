@@ -8,7 +8,7 @@ const Input = forwardRef<HTMLInputElement, SearchProps>(function Input(
   ref
 ) {
   return (
-    <div className={styles['input-wrapper']}>
+    <div className={styles["input-wrapper"]}>
       <input
         ref={ref}
         className={cn(styles.input, className, {
@@ -16,8 +16,8 @@ const Input = forwardRef<HTMLInputElement, SearchProps>(function Input(
         })}
         {...props}
       />
-      <img className={styles['icon']} src="/search-icon.svg" alt="" />
-    </div> 
+      <img className={styles["icon"]} src="/search-icon.svg" alt="" />
+    </div>
   );
 });
 

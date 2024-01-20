@@ -1,12 +1,8 @@
-import { MouseEvent, useState } from "react";
+import { MouseEvent } from "react";
 import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
 
-
-
 function App() {
-  const [counter, setCounter] = useState<number>(0); //типипзация состояния
-
   const addCounter = (e: MouseEvent) => {
     console.log(e);
   };
@@ -25,7 +21,6 @@ function App() {
         <a href="/menu">Меню</a>
         <a href="/cart">Коризна</a>
       </div>
-     
     </>
   );
 }

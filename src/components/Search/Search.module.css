@@ -10,10 +10,10 @@
   min-width: 200px;
   box-shadow: 15px 20px 45px 0px rgba(233, 233, 233, 0.25);
 }
-.input-wrapper{
+.input-wrapper {
   position: relative;
 }
-.icon{
+.icon {
   position: absolute;
   left: 17px;
   top: 17px;

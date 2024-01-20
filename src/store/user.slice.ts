@@ -40,12 +40,12 @@ export const login = createAsyncThunk('user/login',
 	}
 );
 export const register = createAsyncThunk('user/register',
-	async (params: { email: string, password: string, name:string }) => {
+	async (params: { email: string, password: string, name: string }) => {
 		try {
 			const { data } = await axios.post<LoginResponse>(`${PREFIX}/auth/register`, {
 				email: params.email,
 				password: params.password,
-				name:params.name
+				name: params.name
 			});
 			return data;
 		} catch (e) {
@@ -56,12 +56,12 @@ export const register = createAsyncThunk('user/register',
 
 	}
 );
-export const getProfile = createAsyncThunk<Profile,void,{state: RootState}>('user/getProfile',
+export const getProfile = createAsyncThunk<Profile, void, { state: RootState }>('user/getProfile',
 	async (_, thunkApi) => {
-		 const jwt = thunkApi.getState().user.jwt
+		const jwt = thunkApi.getState().user.jwt
 		const { data } = await axios.get<Profile>(`${PREFIX}/user/profile`, {
-			headers:{
-Authorization: `Bearer ${jwt}`
+			headers: {
+				Authorization: `Bearer ${jwt}`
 			}
 		});
 		return data;
@@ -102,9 +102,9 @@ export const userSlice = createSlice({
 			}
 		});
 		builder.addCase(register.rejected, (state, action) => {
-			state.registerErrorMessage= action.error.message;
+			state.registerErrorMessage = action.error.message;
 		});
-		
+
 	}
 });
 
